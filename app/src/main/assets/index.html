@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Marcus' Pipe Bending Calculator</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body class="bg-black">
+
+		<div class="container-fluid text-center">
+      <div class="row">
+        <div class="col">
+      <div class="row">
+        <div class="col text-center">
+          <img src="./images/frac_to_decs.png" alt="fracs to decs" width="350" class="pic border border-white">
+        </div>
+      </div>
+
+      <div class="row-fluid">
+        <div class="col-fluid">
+          <form name="calculator">
+              <input id="answer" type="text" name="answer" class="rounded text-center" disabled/>
+
+              <div class="row">
+                <div class="col">
+                  <input type="button" value=" C " onclick="calculator.answer.value = ''" />
+                  <input type="button" value="<--" onclick="deleteChar(this.form.answer)" />
+                  <input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
+                  <input type="button" value="&#960;" onclick="addChar(this.form.answer,'3.14159265359')" />
+                  <input type="button" value="%" onclick=" percent(this.form.answer)" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
+                  <input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
+                  <input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
+                  <input type="button" value="x&#94;" onclick="if(checkNum(this.form.answer.value)) { exp(this.form) }" />
+                  <input type="button" value=" &#247 " onclick="calculator.answer.value += '/'" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
+                  <input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
+                  <input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
+                  <input type="button" value="ln" onclick="if(checkNum(this.form.answer.value)) { ln(this.form) }" />
+                  <input type="button" value=" &times " onclick="calculator.answer.value += '*'" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
+                  <input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
+                  <input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
+                  <input type="button" value="&radic;" onclick="if(checkNum(this.form.answer.value)) { sqrt(this.form) }" />
+                  <input type="button" value=" - " onclick="calculator.answer.value += '-'" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="button" value="&#177" onclick="changeSign(this.form.answer)" />
+                  <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
+                  <input type="button" value="&#46;" onclick="addChar(this.form.answer, '&#46;')" />
+                  <input type="button" value="x&#50;" onclick="if(checkNum(this.form.answer.value)) { square(this.form) }" />
+                  <input type="button" value=" + " onclick="calculator.answer.value += '+'" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <input type="button" value="(" onclick="addChar(this.form.answer, '(')"/>
+                  <input type="button" value=")" onclick="addChar(this.form.answer,')')"/>
+                  <input type="button" value="cos" onclick="if(checkNum(this.form.answer.value)) { cos(this.form) }"/>
+                  <input type="button" value="sin" onclick="if(checkNum(this.form.answer.value)) { sin(this.form) }"/>
+                  <input type="button" value="tan" onclick="if(checkNum(this.form.answer.value)) { tan(this.form) }" />
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col">
+                  <!-- <input type="button" value="SETBACK " onclick="calculator.answer.value += '2.5*Math.tan(ANGLE/2*.0174532925199432973)'" />
+                  <input type="button" value="ARC " onclick="calculator.answer.value += '.01745*ANGLE*2.5'" /> -->
+                  <input  id="btn" type="button" value="Setback(0) and Advance(Arc)" class="specButton" />
+                </div>
+              </div>
+
+          </form>
+        </div>
+      </div>
+
+          <div class="mt-2">
+            <p> Maars12&#169 Pipe Bender's Calc</p>
+            </div>
+
+
+            <!-- <div class="row">
+              <div class="col text-center">
+                <img src="../assets/images/Rtriangle.png" alt="right triangle" width="350" class="pic">
+                <h4 class="pt-3 pb-2">Enter any two values:</h4>
+                <h3>Side a</h3>
+                <input id="sidea" type="text" name="sidea" class="rounded text-center" />
+                <h3>Side b</h3>
+                <input id="sideb" type="text" name="sideb" class="rounded text-center" />
+                <h3>Side c</h3>
+                <input id="sidec" type="text" name="sidec" class="rounded text-center" />
+                <h3>Angle A</h3>
+                <input id="anglea" type="text" name="anglea" class="rounded text-center" />
+                <h3>Angle B</h3>
+                <input id="angleb" type="text" name="angleb" class="rounded text-center mb-5" />
+              </div>
+            </div> -->
+
+
+          </div>
+          </div>
+        </div>
+
+
+        <script data-ad-client="ca-pub-1107828251118687" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script type="text/javascript">
+
+            // var btn = document.createElement("button");
+            // btn.innerHTML = "Setback(0) and Advance(Arc)";
+            // btn.setAttribute("class", "p-5 rounded bg-success font-weight-bold h1")
+            // const pew = new Audio();
+            // pew.src = "./sounds/pew.mp3";
+
+
+            document.getElementById("btn").addEventListener("click", function() {
+
+            const bRadius = prompt("What is the radius of the bender?");
+            const angle = prompt("What is the angle of bend?");
+
+            alert("Setback(0)= " + bRadius* Math.tan (angle / "2" * "0.0174532925199432973") + "\n" + "Advance(Arc)= " + "0.01745" * angle * bRadius);
+            })
+            
+            function addChar(input, character) {
+              if(input.value == null || input.value == "0")
+                input.value = character
+              else
+                input.value += character
+            }
+
+            function cos(form) {
+              form.answer.value = Math.cos(form.answer.value);
+            }
+
+            function sin(form) {
+              form.answer.value = Math.sin(form.answer.value);
+            }
+
+            function tan(form) {
+              form.answer.value = Math.tan(form.answer.value);
+            }
+
+            function sqrt(form) {
+              form.answer.value = Math.sqrt(form.answer.value);
+            }
+
+            function ln(form) {
+              form.answer.value = Math.log(form.answer.value);
+            }
+
+            function exp(form) {
+              form.answer.value = Math.exp(form.answer.value);
+            }
+
+            function deleteChar(input) {
+              input.value = input.value.substring(0, input.value.length - 1)
+            }
+            var val = 0.0;
+            function percent(input) {
+              val = input.value;
+              input.value = input.value + "%";
+            }
+
+            function changeSign(input) {
+              if(input.value.substring(0, 1) == "-")
+                input.value = input.value.substring(1, input.value.length)
+              else
+                input.value = "-" + input.value
+            }
+
+            function compute(form) {
+              //if (val !== 0.0) {
+              // var percent = form.answer.value;  
+              // percent = pcent.substring(percent.indexOf("%")+1);
+              // form.answer.value = parseFloat(percent)/100 * val;
+                //val = 0.0;
+            // } else 
+                form.answer.value = eval(form.answer.value);
+              }
+
+
+            function square(form) {
+              form.answer.value = eval(form.answer.value) * eval(form.answer.value)
+            }
+
+            function checkNum(str) {
+              for (var i = 0; i < str.length; i++) {
+                var ch = str.charAt(i);
+                if (ch < "0" || ch > "9") {
+                  if (ch != "/" && ch != "*" && ch != "+" && ch != "-" && ch != "."
+                    && ch != "(" && ch!= ")" && ch != "%") {
+                    alert("invalid entry!")
+                    return false
+                    }
+                  }
+                }
+                return true
+            }
+
+
+          </script>
+    </body>
+</html>

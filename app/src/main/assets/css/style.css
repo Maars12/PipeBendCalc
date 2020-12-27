@@ -1,0 +1,41 @@
+.bg-black {
+  background-color: black;
+}
+
+.pic {
+  margin-top: 2rem;
+  margin-right: .3rem;
+}
+
+.specButton {
+  width: 20rem !important;
+}
+
+input[type=button] {
+  background: rgb(65, 167, 65);
+  font-size: 18px;
+  font-weight: 900;
+  border-radius: 7px;
+  margin-left: 4px;
+  margin-top: 10px;
+  width: 3.5rem;
+}
+
+input[type=button]:hover {
+  background-color: #003300;
+  color: white;
+}
+
+input[type = text] {
+  position: relative;
+  display: block;
+  margin: 5px auto;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-shadow: 4px 0px 12px white inset;
+  background-color: black;
+}
