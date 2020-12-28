@@ -14,7 +14,7 @@
         <div class="col">
       <div class="row">
         <div class="col text-center">
-          <img src="./images/frac_to_decs.png" alt="fracs to decs" width="350" class="pic border border-white">
+          <img src="./images/frac_to_decs.png" alt="fracs to decs" width="350" class="pic">
         </div>
       </div>
 
@@ -55,31 +55,31 @@
 
               <div class="row">
                 <div class="col">
-                  <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
-                  <input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
-                  <input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
-                  <input type="button" value="&radic;" onclick="if(checkNum(this.form.answer.value)) { sqrt(this.form) }" />
-                  <input type="button" value=" - " onclick="calculator.answer.value += '-'" />
+                  <input type="button" class="pr-1 pl-1" value=" 1 " onclick="calculator.answer.value += '1'" />
+                  <input type="button" class="pr-1 pl-1" value=" 2 " onclick="calculator.answer.value += '2'" />
+                  <input type="button" class="pr-1 pl-1" value=" 3 " onclick="calculator.answer.value += '3'" />
+                  <input type="button" class="pr-1 pl-1" value="&radic;" onclick="if(checkNum(this.form.answer.value)) { sqrt(this.form) }" />
+                  <input type="button" class="pr-1 pl-1" value=" - " onclick="calculator.answer.value += '-'" />
                 </div>
               </div>
 
               <div class="row">
                 <div class="col">
-                  <input type="button" value="&#177" onclick="changeSign(this.form.answer)" />
-                  <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
-                  <input type="button" value="&#46;" onclick="addChar(this.form.answer, '&#46;')" />
-                  <input type="button" value="x&#50;" onclick="if(checkNum(this.form.answer.value)) { square(this.form) }" />
-                  <input type="button" value=" + " onclick="calculator.answer.value += '+'" />
+                  <input type="button" class="pr-1 pl-1" value="&#177" onclick="changeSign(this.form.answer)" />
+                  <input type="button" class="pr-1 pl-1" value=" 0 " onclick="calculator.answer.value += '0'" />
+                  <input type="button" class="pr-1 pl-1" value="&#46;" onclick="addChar(this.form.answer, '&#46;')" />
+                  <input type="button" class="pr-1 pl-1" value="x&#50;" onclick="if(checkNum(this.form.answer.value)) { square(this.form) }" />
+                  <input type="button" class="pr-1 pl-1" value=" + " onclick="calculator.answer.value += '+'" />
                 </div>
               </div>
 
               <div class="row">
                 <div class="col">
-                  <input type="button" value="(" onclick="addChar(this.form.answer, '(')"/>
-                  <input type="button" value=")" onclick="addChar(this.form.answer,')')"/>
-                  <input type="button" value="cos" onclick="if(checkNum(this.form.answer.value)) { cos(this.form) }"/>
-                  <input type="button" value="sin" onclick="if(checkNum(this.form.answer.value)) { sin(this.form) }"/>
-                  <input type="button" value="tan" onclick="if(checkNum(this.form.answer.value)) { tan(this.form) }" />
+                  <input type="button" class="pr-1 pl-1" value="(" onclick="addChar(this.form.answer, '(')"/>
+                  <input type="button" class="pr-1 pl-1" value=")" onclick="addChar(this.form.answer,')')"/>
+                  <input type="button" class="pr-1 pl-1" value="cos" onclick="if(checkNum(this.form.answer.value)) { cos(this.form) }"/>
+                  <input type="button" class="pr-1 pl-1" value="sin" onclick="if(checkNum(this.form.answer.value)) { sin(this.form) }"/>
+                  <input type="button" class="pr-1 pl-1" value="tan" onclick="if(checkNum(this.form.answer.value)) { tan(this.form) }" />
                 </div>
               </div>
               

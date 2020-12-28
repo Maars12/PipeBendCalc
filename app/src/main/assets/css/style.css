@@ -8,7 +8,8 @@
 }
 
 .specButton {
-  width: 20rem !important;
+  margin-top: 15px;
+  width: 22.5rem !important;
 }
 
 input[type=button] {
@@ -16,9 +17,7 @@ input[type=button] {
   font-size: 18px;
   font-weight: 900;
   border-radius: 7px;
-  margin-left: 4px;
-  margin-top: 10px;
-  width: 3.5rem;
+  width: 4.3rem;
 }
 
 input[type=button]:hover {
@@ -30,6 +29,7 @@ input[type = text] {
   position: relative;
   display: block;
   margin: 5px auto;
+  margin-bottom: 20px;
   font-size: 20px;
   font-weight: bold;
   color: white;
