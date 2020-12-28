@@ -1,8 +1,12 @@
 package com.example.pipebendcalc;
 
+import android.app.VoiceInteractor;
+import android.content.DialogInterface;
+import android.webkit.JsResult;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.google.android.gms.ads.AdRequest;
@@ -28,7 +32,24 @@ public class MainActivity extends AppCompatActivity {
 
         webHtmlCss.loadUrl("file:///android_asset/index.html");
         webHtmlCss.getSettings().setJavaScriptEnabled(true);
-        webHtmlCss.setWebChromeClient(new WebChromeClient());
+        webHtmlCss.setWebChromeClient(new WebChromeClient() {
+
+            @Override
+            public boolean onJsAlert(WebView view, String url, String message, final JsResult result) {
+                AlertDialog dialog = new AlertDialog.Builder(view.getContext()).
+                        setTitle("").
+                        setMessage(message).
+                        setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //do nothing
+                            }
+                        }).create();
+                dialog.show();
+                result.confirm();
+                return true;
+            } });
+
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
@@ -42,4 +63,5 @@ public class MainActivity extends AppCompatActivity {
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
     }
+
 }
