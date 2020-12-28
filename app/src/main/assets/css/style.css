@@ -1,5 +1,5 @@
 .bg-black {
-  background-color: black;
+  background-color: black !important;
 }
 
 .pic {
@@ -10,6 +10,38 @@
 .specButton {
   margin-top: 15px;
   width: 22.5rem !important;
+}
+
+.submit {
+  background: rgb(65, 167, 65);
+  font-size: 18px;
+  font-weight: 900;
+  border-radius: 7px;
+}
+
+.title {
+  font-size: 20px !important;
+  font-weight: bold !important;
+  color: white !important;
+  box-shadow: 4px 0px 12px white inset !important;
+  background-color: black !important;
+}
+
+.modalInput {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 4px 0px 12px white inset;
+  background-color: black;
+
+}
+
+.eighths {
+  font-size: small;
+}
+
+.sixteenths {
+  font-size: small;
 }
 
 input[type=button] {
@@ -25,7 +57,7 @@ input[type=button]:hover {
   color: white;
 }
 
-input[type = text] {
+.mainInput {
   position: relative;
   display: block;
   margin: 5px auto;

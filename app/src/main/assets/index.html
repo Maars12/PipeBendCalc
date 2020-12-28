@@ -21,7 +21,7 @@
       <div class="row-fluid">
         <div class="col-fluid">
           <form name="calculator">
-              <input id="answer" type="text" name="answer" class="rounded text-center" disabled/>
+              <input id="answer" type="text" name="answer" class="rounded text-center mainInput" disabled/>
 
               <div class="row">
                 <div class="col">
@@ -83,11 +83,50 @@
                 </div>
               </div>
               
-              <div class="row">
-                <div class="col">
                   <!-- <input type="button" value="SETBACK " onclick="calculator.answer.value += '2.5*Math.tan(ANGLE/2*.0174532925199432973)'" />
                   <input type="button" value="ARC " onclick="calculator.answer.value += '.01745*ANGLE*2.5'" /> -->
-                  <input  id="btn" type="button" value="Setback(0) and Advance(Arc)" class="specButton" />
+              <div class="row">
+                <div class="col">
+                  <input type="button" value="Setback(0) and Advance(Arc)" class="specButton" data-toggle="modal" data-target=".bd-example-modal-sm"/>
+                  
+
+                  <div class="modal fade bd-example-modal-sm p-5" tabindex="-1" role="dialog"
+                       aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content title p-5">
+                        <div class="">What is the radius of the bender?</div>
+                        <input type="text" id="bRadius" placeholder="&nbsp &nbsp Enter value here" class="modalInput rounded">
+                        <div class="mt-3">What is the angle of the bend?</div>
+                        <input type="text" id="angle" placeholder="&nbsp &nbsp Enter value here" class="modalInput rounded">
+                        <div class="row">
+                          <div class="col p-1 mt-2 eighths">
+                            Eighths </br>
+                            1/8 = 0.125 </br>
+                            1/4 = 0.250 </br>
+                            3/8 = 0.375 </br>
+                            1/2 = 0.500 </br>
+                            5/8 = 0.625 </br>
+                            3/4 = 0.750 </br>
+                            7/8 = 0.875 </br>
+
+                          </div>
+                          <div class="col p-1 mt-2 sixteenths">
+                            Sixteenths </br>
+                            1/16 = 0.0625 </br>
+                            3/16 = 0.1875 </br>
+                            5/16 = 0.3125 </br>
+                            7/16 = 0.4375 </br>
+                            9/16 = 0.5625 </br>
+                            11/16 = 0.6875 </br>
+                            13/16 = 0.8125 </br>
+                            15/16 = 0.9375 </br>
+                          </div>
+                        </div>
+                        <button class="bg-success submit mt-3" id="btn">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
@@ -122,7 +161,8 @@
           </div>
         </div>
 
-
+        <script src="../assets/js/jQueryslim.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
         <script data-ad-client="ca-pub-1107828251118687" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script type="text/javascript">
 
@@ -134,12 +174,13 @@
 
 
             document.getElementById("btn").addEventListener("click", function() {
-
-            const bRadius = prompt("What is the radius of the bender?");
-            const angle = prompt("What is the angle of bend?");
-
-            alert("Setback(0)= " + bRadius* Math.tan (angle / "2" * "0.0174532925199432973") + "\n" + "Advance(Arc)= " + "0.01745" * angle * bRadius);
-            })
+            event.preventDefault();
+            const bRadius = document.getElementById("bRadius").value;
+            const angle = document.getElementById("angle").value;
+              alert("Setback(0)= " + bRadius* Math.tan (angle / "2" * "0.0174532925199432973") + "\n" + "Advance(Arc)= " + "0.01745" * angle * bRadius);
+              
+            
+          })
             
             function addChar(input, character) {
               if(input.value == null || input.value == "0")

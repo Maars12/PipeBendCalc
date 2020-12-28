@@ -2,10 +2,9 @@ package com.example.pipebendcalc;
 
 import android.app.VoiceInteractor;
 import android.content.DialogInterface;
-import android.webkit.JsResult;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
+import android.text.InputType;
+import android.webkit.*;
+import android.widget.EditText;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 result.confirm();
                 return true;
             } });
+
 
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
