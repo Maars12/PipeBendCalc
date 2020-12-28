@@ -50,6 +50,7 @@ input[type=button] {
   font-weight: 900;
   border-radius: 7px;
   width: 4.3rem;
+  margin-top: 10px;
 }
 
 input[type=button]:hover {
