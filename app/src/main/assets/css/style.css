@@ -8,15 +8,17 @@
 }
 
 .specButton {
-  margin-top: 15px;
+  margin-top: 15px !important;
   width: 22.5rem !important;
 }
 
 .submit {
-  background: rgb(65, 167, 65);
+  /* background: rgb(65, 167, 65); */
   font-size: 18px;
   font-weight: 900;
-  border-radius: 7px;
+  background-image: url("../images/glass.png");
+  background-size: cover;
+  color: white;
 }
 
 .title {
@@ -37,20 +39,28 @@
 }
 
 .eighths {
-  font-size: small;
+  position: absolute;
+  right: 40px;
+  font-size: 20px;
+  color: white;
 }
 
 .sixteenths {
-  font-size: small;
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+  color: white;
 }
 
 input[type=button] {
-  background: rgb(65, 167, 65);
+  background-image: url("../images/glass.png");
+  background-size: cover;
+  color: white;
   font-size: 18px;
   font-weight: 900;
-  border-radius: 7px;
-  width: 4.3rem;
-  margin-top: 10px;
+  width: 4.5rem;
+  height: 3rem;
+  margin: 0px;
 }
 
 input[type=button]:hover {
@@ -67,8 +77,26 @@ input[type=button]:hover {
   font-weight: bold;
   color: white;
   padding: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
   box-shadow: 4px 0px 12px white inset;
   background-color: black;
+}
+
+@media only screen and (max-width: 400px) {
+  input[type=button] {
+    background-image: url("../images/glass.png");
+    background-size: cover;
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+    width: 4rem;
+    height: 3rem;
+    margin: 0px;
+  }
+
+  .specButton {
+    margin-top: 15px !important;
+    width: 20rem !important;
+  }
 }
