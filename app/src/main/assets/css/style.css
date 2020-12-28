@@ -4,7 +4,7 @@
 
 .pic {
   margin-top: 2rem;
-  margin-right: .3rem;
+  margin-right: 0.3rem;
 }
 
 .specButton {
@@ -16,9 +16,10 @@
   /* background: rgb(65, 167, 65); */
   font-size: 18px;
   font-weight: 900;
-  background-image: url("../images/glass.png");
+  background-image: url("../images/greenglass.jpg");
   background-size: cover;
-  color: white;
+  color: black;
+  border-radius: 5px;
 }
 
 .title {
@@ -41,20 +42,21 @@
   position: absolute;
   right: 40px;
   font-size: 20px;
-  color: white;
+  color: rgb(25, 150, 52);
 }
 
 .sixteenths {
   position: absolute;
   left: 10px;
   font-size: 20px;
-  color: white;
+  color: rgb(25, 150, 52);
 }
 
-input[type=button] {
-  background-image: url("../images/glass.png");
+input[type="button"] {
+  background-image: url("../images/greenglass.jpg");
   background-size: cover;
-  color: white;
+  color: black;
+  border-radius: 5px;
   font-size: 18px;
   font-weight: 900;
   width: 4.5rem;
@@ -62,7 +64,7 @@ input[type=button] {
   margin: 0px;
 }
 
-input[type=button]:hover {
+input[type="button"]:hover {
   background-color: #003300;
   color: white;
 }
@@ -83,10 +85,11 @@ input[type=button]:hover {
 }
 
 @media only screen and (max-width: 400px) {
-  input[type=button] {
-    background-image: url("../images/glass.png");
+  input[type="button"] {
+    background-image: url("../images/greenglass.jpg");
     background-size: cover;
-    color: white;
+    border-radius: 5px;
+    color: black;
     font-size: 18px;
     font-weight: 900;
     width: 4rem;
