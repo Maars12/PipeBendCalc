@@ -17,10 +17,10 @@
   font-size: 18px;
   font-weight: 900;
   /* background-image: url("../images/greenglass.jpg"); */
-  background-color: rgb(101, 192, 10);
+  background: rgb(16, 115, 6);
   background-size: cover;
   color: black;
-  border: solid darkgreen 2px;
+  border: solid black 2px;
   border-radius: 5px;
 }
 
@@ -56,10 +56,15 @@
 
 input[type="button"] {
   /* background-image: url("../images/greenglass.jpg"); */
-  background-color: rgb(101, 192, 10);
+  background: linear-gradient(
+    90deg,
+    rgba(16, 115, 6, 1) 0%,
+    rgba(58, 193, 9, 1) 35%,
+    rgba(16, 115, 6, 1) 100%
+  );
   background-size: cover;
   color: black;
-  border: solid darkgreen 2px;
+  border: solid black 2px;
   border-radius: 5px;
   font-size: 18px;
   font-weight: 900;
@@ -91,7 +96,13 @@ input[type="button"]:hover {
 @media only screen and (max-width: 400px) {
   input[type="button"] {
     /* background-image: url("../images/greenglass.jpg"); */
-    background-color: rgb(101, 192, 10);
+    background: rgb(5, 34, 2);
+    background: linear-gradient(
+      90deg,
+      rgba(5, 34, 2, 1) 0%,
+      rgba(58, 193, 9, 1) 35%,
+      rgba(5, 34, 2, 1) 100%
+    );
     background-size: cover;
     border-radius: 5px;
     color: black;
