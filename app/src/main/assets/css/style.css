@@ -57,7 +57,7 @@
 input[type="button"] {
   /* background-image: url("../images/greenglass.jpg"); */
   background: linear-gradient(
-    90deg,
+    0.3turn,
     rgba(16, 115, 6, 1) 0%,
     rgba(58, 193, 9, 1) 35%,
     rgba(16, 115, 6, 1) 100%
