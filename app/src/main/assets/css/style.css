@@ -185,7 +185,7 @@ input[type="button"]:hover {
     width: 20rem !important;
   }
 }
-@media only screen and (min-height: 700px) {
+@media only screen and (min-height: 731px) {
   .mt-tall {
     margin-top: 5%;
   }
