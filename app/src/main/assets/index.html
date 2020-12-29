@@ -84,15 +84,29 @@
                   
 
                   <div class="modal fade bd-example-modal-sm p-5" tabindex="-1" role="dialog"
-                       aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        aria-labelledby="mySmallModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-sm">
                       <div class="modal-content title p-5">
                         <div class="">What is the radius of the bender?</div>
-                        <input type="text" id="bRadius" placeholder="&nbsp &nbsp Enter value here" class="modalInput rounded">
+                        <input type="text" id="bRadius" placeholder="&nbsp &nbsp Enter value here" class="modalInput rounded" value="2.5">
                         <div class="mt-3">What is the angle of the bend?</div>
                         <input type="text" id="angle" placeholder="&nbsp &nbsp Enter value here" class="modalInput rounded">
-                        <!-- <div class="row">
-                          <div class="col p-1 mt-2 eighths">
+                        <button class="bg-success submit mt-3" id="btn" data-toggle="modal" data-target=".bd-example-modal-sm2">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="modal fade bd-example-modal-sm2 ml-1" tabindex="-1" role="dialog"
+                        aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content title p-6">
+
+                        <div id="btn2" class="alertText2 pb-2"></div>
+                        <div id="btn3" class="alertText3 pb-2"></div>
+
+                        <div class="row m-0 pb-2 alertText">
+                          <div class="col">
                             Eighths </br>
                             1/8 = 0.125 </br>
                             1/4 = 0.250 </br>
@@ -101,9 +115,8 @@
                             5/8 = 0.625 </br>
                             3/4 = 0.750 </br>
                             7/8 = 0.875 </br>
-
                           </div>
-                          <div class="col p-1 mt-2 sixteenths">
+                          <div class="col">
                             Sixteenths </br>
                             1/16 = 0.0625 </br>
                             3/16 = 0.1875 </br>
@@ -114,40 +127,41 @@
                             13/16 = 0.8125 </br>
                             15/16 = 0.9375 </br>
                           </div>
-                        </div> -->
-                        <button class="bg-success submit mt-3" id="btn">Submit</button>
+                        </div>
+
                       </div>
                     </div>
                   </div>
                   
+
                 </div>
               </div>
-
           </form>
         </div>
       </div>
 
-          <div class="mt-2">
-            <p> Maars12&#169 Pipe Bender's Calc</p>
-            </div>
+      
+      <!-- <div class="row">
+        <div class="col text-center">
+          <img src="../assets/images/Rtriangle.png" alt="right triangle" width="350" class="pic">
+          <h4 class="pt-3 pb-2">Enter any two values:</h4>
+          <h3>Side a</h3>
+          <input id="sidea" type="text" name="sidea" class="rounded text-center" />
+          <h3>Side b</h3>
+          <input id="sideb" type="text" name="sideb" class="rounded text-center" />
+          <h3>Side c</h3>
+          <input id="sidec" type="text" name="sidec" class="rounded text-center" />
+          <h3>Angle A</h3>
+          <input id="anglea" type="text" name="anglea" class="rounded text-center" />
+          <h3>Angle B</h3>
+          <input id="angleb" type="text" name="angleb" class="rounded text-center mb-5" />
+        </div>
+      </div> -->
+      
 
-
-            <!-- <div class="row">
-              <div class="col text-center">
-                <img src="../assets/images/Rtriangle.png" alt="right triangle" width="350" class="pic">
-                <h4 class="pt-3 pb-2">Enter any two values:</h4>
-                <h3>Side a</h3>
-                <input id="sidea" type="text" name="sidea" class="rounded text-center" />
-                <h3>Side b</h3>
-                <input id="sideb" type="text" name="sideb" class="rounded text-center" />
-                <h3>Side c</h3>
-                <input id="sidec" type="text" name="sidec" class="rounded text-center" />
-                <h3>Angle A</h3>
-                <input id="anglea" type="text" name="anglea" class="rounded text-center" />
-                <h3>Angle B</h3>
-                <input id="angleb" type="text" name="angleb" class="rounded text-center mb-5" />
-              </div>
-            </div> -->
+      <div class="mt-2">
+        <p> Maars12&#169 Pipe Bender's Calc</p>
+        </div>
 
 
           </div>
@@ -170,7 +184,9 @@
             event.preventDefault();
             const bRadius = document.getElementById("bRadius").value;
             const angle = document.getElementById("angle").value;
-              alert("Setback(0)= " + bRadius* Math.tan (angle / "2" * "0.0174532925199432973") + "\n" + "Advance(Arc)= " + "0.01745" * angle * bRadius);
+
+            document.getElementById("btn2").innerHTML=("Setback(0)= " + bRadius* Math.tan (angle / "2" * "0.0174532925199432973")) 
+            document.getElementById("btn3").innerHTML=("Advance(Arc)= " + "0.01745" * angle * bRadius);
             })
             
             function addChar(input, character) {
