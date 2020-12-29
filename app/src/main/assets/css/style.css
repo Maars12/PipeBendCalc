@@ -80,6 +80,10 @@
   width: 100% !important;
 }
 
+.modal-width100 {
+  width: 100% !important;
+}
+
 input[type="button"] {
   /* background-image: url("../images/greenglass.jpg"); */
   background: linear-gradient(
