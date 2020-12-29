@@ -1,13 +1,11 @@
-package com.example.pipebendcalc;
+package com.maars12.pipebendcalc;
 
-import android.app.VoiceInteractor;
 import android.content.DialogInterface;
-import android.text.InputType;
 import android.webkit.*;
-import android.widget.EditText;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.example.pipebendcalc.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
