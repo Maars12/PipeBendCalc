@@ -84,6 +84,42 @@
   width: 100% !important;
 }
 
+.clearBack {
+  background: linear-gradient(
+    0.3turn,
+    rgb(115, 6, 6) 0%,
+    rgb(193, 9, 9) 35%,
+    rgb(115, 6, 6) 100%
+  ) !important;
+}
+
+.equal {
+  background: linear-gradient(
+    0.3turn,
+    rgb(6, 35, 115) 0%,
+    rgb(9, 83, 193) 35%,
+    rgb(6, 35, 115) 100%
+  ) !important;
+}
+
+.uncommon {
+  background: linear-gradient(
+    0.3turn,
+    rgb(115, 113, 6) 0%,
+    rgb(193, 175, 9) 35%,
+    rgb(115, 113, 6) 100%
+  ) !important;
+}
+
+.symbols {
+  background: linear-gradient(
+    0.3turn,
+    rgb(115, 6, 57) 0%,
+    rgb(193, 9, 132) 35%,
+    rgb(115, 6, 57) 100%
+  ) !important;
+}
+
 input[type="button"] {
   /* background-image: url("../images/greenglass.jpg"); */
   background: linear-gradient(

@@ -42,37 +42,37 @@
 
               <div class="row">
                 <div class="col">
-                  <input type="button" value=" C " onclick="calculator.answer.value = ''" /><input type="button" value="<--" onclick="deleteChar(this.form.answer)" /><input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" /><input type="button" value="&#960;" onclick="addChar(this.form.answer,'3.14159265359')" /><input type="button" value="%" onclick=" percent(this.form.answer)" />
+                  <input type="button" value=" C " class="clearBack" onclick="calculator.answer.value = ''" /><input type="button" class="clearBack" value="<--" onclick="deleteChar(this.form.answer)" /><input type="button" value=" = " class="equal" onclick="calculator.answer.value = eval(calculator.answer.value)" /><input type="button" value="&#960;" class="uncommon" onclick="addChar(this.form.answer,'3.14159265359')" /><input type="button" value="%" class="uncommon" onclick=" percent(this.form.answer)" />
                 </div>
               </div>
 
               <div class="row">
                 <div class="col">
-                  <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" /><input type="button" value=" 8 " onclick="calculator.answer.value += '8'" /><input type="button" value=" 9 " onclick="calculator.answer.value += '9'" /><input type="button" value="x&#94;" onclick="if(checkNum(this.form.answer.value)) { exp(this.form) }" /><input type="button" value=" &#247 " onclick="calculator.answer.value += '/'" />
+                  <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" /><input type="button" value=" 8 " onclick="calculator.answer.value += '8'" /><input type="button" value=" 9 " onclick="calculator.answer.value += '9'" /><input type="button" value=" &#247 " class="symbols" onclick="calculator.answer.value += '/'" /><input type="button" value="x&#94;" class="uncommon" onclick="if(checkNum(this.form.answer.value)) { exp(this.form) }" />
                 </div>
               </div>
 
               <div class="row">
                 <div class="col">
-                  <input type="button" value=" 4 " onclick="calculator.answer.value += '4'" /><input type="button" value=" 5 " onclick="calculator.answer.value += '5'" /><input type="button" value=" 6 " onclick="calculator.answer.value += '6'" /><input type="button" value="ln" onclick="if(checkNum(this.form.answer.value)) { ln(this.form) }" /><input type="button" value=" &times " onclick="calculator.answer.value += '*'" />
+                  <input type="button" value=" 4 " onclick="calculator.answer.value += '4'" /><input type="button" value=" 5 " onclick="calculator.answer.value += '5'" /><input type="button" value=" 6 " onclick="calculator.answer.value += '6'" /><input type="button" value=" &times " class="symbols" onclick="calculator.answer.value += '*'" /><input type="button" value="ln" class="uncommon" onclick="if(checkNum(this.form.answer.value)) { ln(this.form) }" />
                 </div>
               </div>
 
               <div class="row">
                 <div class="col">
-                  <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" /><input type="button" value=" 2 " onclick="calculator.answer.value += '2'" /><input type="button" value=" 3 " onclick="calculator.answer.value += '3'" /><input type="button" value="&radic;" onclick="if(checkNum(this.form.answer.value)) { sqrt(this.form) }" /><input type="button" value=" - " onclick="calculator.answer.value += '-'" />
+                  <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" /><input type="button" value=" 2 " onclick="calculator.answer.value += '2'" /><input type="button" value=" 3 " onclick="calculator.answer.value += '3'" /><input type="button" value=" - " class="symbols" onclick="calculator.answer.value += '-'" /><input type="button" value="&radic;" class="uncommon" onclick="if(checkNum(this.form.answer.value)) { sqrt(this.form) }" />
                 </div>
               </div>
 
               <div class="row">
                 <div class="col">
-                  <input type="button" value="&#177" onclick="changeSign(this.form.answer)" /><input type="button" value=" 0 " onclick="calculator.answer.value += '0'" /><input type="button" value="&#46;" onclick="addChar(this.form.answer, '&#46;')" /><input type="button" value="x&#50;" onclick="if(checkNum(this.form.answer.value)) { square(this.form) }" /><input type="button" value=" + " onclick="calculator.answer.value += '+'" />
+                  <input type="button" value="&#177" class="uncommon" onclick="changeSign(this.form.answer)" /><input type="button" value=" 0 " onclick="calculator.answer.value += '0'" /><input type="button" value="&#46;" class="symbols" onclick="addChar(this.form.answer, '&#46;')" /><input type="button" value=" + " class="symbols" onclick="calculator.answer.value += '+'" /><input type="button" value="x&#50;"  class="uncommon" onclick="if(checkNum(this.form.answer.value)) { square(this.form) }" />
                 </div>
               </div>
 
               <div class="row">
                 <div class="col">
-                  <input type="button" value="(" onclick="addChar(this.form.answer, '(')"/><input type="button" value=")" onclick="addChar(this.form.answer,')')"/><input type="button" value="cos" onclick="if(checkNum(this.form.answer.value)) { cos(this.form) }"/><input type="button" value="sin" onclick="if(checkNum(this.form.answer.value)) { sin(this.form) }"/><input type="button" value="tan" onclick="if(checkNum(this.form.answer.value)) { tan(this.form) }" />
+                  <input type="button" value="(" class="uncommon" onclick="addChar(this.form.answer, '(')"/><input type="button" value=")" class="uncommon" onclick="addChar(this.form.answer,')')"/><input type="button" value="cos" class="uncommon" onclick="if(checkNum(this.form.answer.value)) { cos(this.form) }"/><input type="button" value="sin" class="uncommon" onclick="if(checkNum(this.form.answer.value)) { sin(this.form) }"/><input type="button" value="tan" class="uncommon" onclick="if(checkNum(this.form.answer.value)) { tan(this.form) }" />
                 </div>
               </div>
               
