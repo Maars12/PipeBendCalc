@@ -17,6 +17,8 @@
 
 Inspired by pipefitters and electricians in the semiconductor industry who use the progressive pipe bending method to layout and bend their steel tubing. This is a scientific calculator that has a fraction to decimal cheat sheet always on screen and a setback(0) and advance(arc) button to quickly figure your zero marks and arc marks.
 
+<img src="./app/src/main/assets/images/PipeBendCalc1.jpg" width="500"/>
+
 ### Prerequisites
 
 Google Play Store - Download
