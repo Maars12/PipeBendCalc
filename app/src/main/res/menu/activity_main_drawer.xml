@@ -9,11 +9,11 @@
     android:checkableBehavior="single">
 
     <item
-      android:id="@+id/navigation_game"
+      android:id="@+id/navigation_calc"
       android:title="Calc"/>
 
     <item
-      android:id="@+id/navigation_current_matches"
+      android:id="@+id/navigation_right_calc"
       android:title="Right Triangle calc"/>
 
 

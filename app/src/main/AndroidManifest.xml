@@ -15,7 +15,7 @@
         <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
                 android:value="ca-app-pub-1107828251118687~6892412492"/>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.maars12.pipebendcalc.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
